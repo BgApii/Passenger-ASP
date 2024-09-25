@@ -29,7 +29,7 @@ public class Flight {
             current = current.next;
         }
         if (current == null){
-            System.out.println("Nama " + name + "tidak ada");
+            System.out.println("Nama " + name + " tidak ada");
         } else {
             prev.next = current.next;
         }
