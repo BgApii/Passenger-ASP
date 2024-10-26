@@ -1,4 +1,4 @@
-public class Flight {
+public class  Flight {
     Passenger head;
     public void addPassenger(String name){
         Passenger passenger = new Passenger(name);
@@ -31,12 +31,14 @@ public class Flight {
         if (current == null){
             System.out.println("Nama " + name + " tidak ada");
         } else {
-            prev.next = current.next;
+            if (prev != null) {
+                prev.next = current.next;
+            }
         }
     }
     public void displayPassanger(){
         if (head == null){
-            System.out.println("Playlist is Empty");
+            System.out.println("Tidak ada penumpang");
         } else {
             Passenger current = head;
             while (current != null){
